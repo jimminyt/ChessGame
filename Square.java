@@ -10,6 +10,10 @@ public class Square {
     piece = newP;
   }
 
+  public Piece getPiece(){
+    return piece;
+  }
+
   public Piece removePiece(){
     Piece tempPiece = piece; //May need checking if not copied correctly?
     piece = null;

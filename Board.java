@@ -13,12 +13,12 @@ public class Board {
       gameBoard[i][1].setPiece(new Pawn(i,1,0));
     }
     gameBoard[0][0].setPiece(new Rook(0,0,0));
-    gameBoard[1][0].setPiece(new Rook(1,0,0));
-    gameBoard[2][0].setPiece(new Rook(2,0,0));
-    gameBoard[3][0].setPiece(new Rook(3,0,0));
-    gameBoard[4][0].setPiece(new Rook(4,0,0));
-    gameBoard[5][0].setPiece(new Rook(5,0,0));
-    gameBoard[6][0].setPiece(new Rook(6,0,0));
+    gameBoard[1][0].setPiece(new Knight(1,0,0));
+    gameBoard[2][0].setPiece(new Bishop(2,0,0));
+    gameBoard[3][0].setPiece(new Queen(3,0,0));
+    gameBoard[4][0].setPiece(new King(4,0,0));
+    gameBoard[5][0].setPiece(new Bishop(5,0,0));
+    gameBoard[6][0].setPiece(new Knight(6,0,0));
     gameBoard[7][0].setPiece(new Rook(7,0,0));
     for (int i=0;i<8;i++){
       gameBoard[i][6].setPiece(new Pawn(i,6,1));
@@ -33,11 +33,18 @@ public class Board {
     gameBoard[7][7].setPiece(new Rook(7,7,1));
   }
 
+  public void makeMove(int x1, int y1, int x2, int y2){
+    gameBoard[x1][y1].getPiece().makeMove(x2,y2);
+    gameBoard[x2][y2].setPiece(gameBoard[x1][y1].getPiece());
+    gameBoard[x1][y1].setPiece(null);
+  }
+
+
   public void display() {
     System.out.println("__________________");
     for (int i=7;i>=0;i--){
       System.out.print("|");
-      for (int j=7;j>=0;j--){
+      for (int j=0;j<8;j++){
         System.out.print(gameBoard[j][i].display());
       }
       System.out.println("|");

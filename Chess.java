@@ -5,5 +5,9 @@ public class Chess {
     Player black = new Player(1);
     Board board = new Board();
     board.display();
+
+    board.makeMove(0,1,0,2);
+
+    board.display();
   }
 }

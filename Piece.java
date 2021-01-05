@@ -1,4 +1,4 @@
-public class Piece{
+abstract class Piece{
 
   protected String name;
   protected int x;
@@ -23,12 +23,21 @@ public class Piece{
     return colour;
   }
 
-  // public Bool move(int xVal, int yVal){
-  //   x = xVal;
-  //   y = yVal;
-  //   //ADD VALIDITY CHECK
-  //   return true;
-  // }
+  public void makeMove(int xVal, int yVal){
+    x = xVal;
+    y = yVal;
+  }
+
+  protected boolean checkBorder(int xVal, int yVal){
+    if (xVal < 0 || xVal > 7 ){
+      return false;
+    } else if (yVal < 0 || yVal > 7 ){
+      return false;
+    } else{
+      return true;
+    }
+
+  }
 
   public String display(){
     if (colour == 0){
