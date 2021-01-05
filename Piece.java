@@ -31,7 +31,11 @@ public class Piece{
   // }
 
   public String display(){
-    return name;
+    if (colour == 0){
+      return "W" + name;
+    } else {
+      return "B" + name;
+    }
   }
 
   public String displayFull(){

@@ -18,9 +18,9 @@ public class Square {
 
   public String display(){
     if (piece != null){
-      return piece.displayFull();
+      return piece.display();
     } else {
-      return "-";
+      return "--";
     }
   }
 
