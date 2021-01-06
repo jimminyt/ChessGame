@@ -6,13 +6,15 @@ public class Chess {
     Board board = new Board();
     board.display();
 
-    board.makeMove(0,1,0,3);
+
+    board.makeMove(1,0,3,1);
     board.display();
-    board.makeMove(0,3,0,4);
+    board.makeMove(3,1,2,3);
     board.display();
-    board.makeMove(0,4,0,5);
+    board.makeMove(2,3,4,2);
     board.display();
-    board.makeMove(0,5,1,6);
-    board.display();
+
+
+
   }
 }

@@ -9,9 +9,9 @@ public class Board {
         gameBoard[i][j] = new Square();
       }
     }
-    for (int i=0;i<8;i++){
-      gameBoard[i][1].setPiece(new Pawn(i,1,0));
-    }
+    // for (int i=0;i<8;i++){
+    //   gameBoard[i][1].setPiece(new Pawn(i,1,0));
+    // }
     gameBoard[0][0].setPiece(new Rook(0,0,0));
     gameBoard[1][0].setPiece(new Knight(1,0,0));
     gameBoard[2][0].setPiece(new Bishop(2,0,0));
