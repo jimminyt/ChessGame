@@ -5,4 +5,7 @@ public class Bishop extends Piece {
     name = "B";
   }
 
+  public boolean validateMove(int xVal, int yVal, Square[][] board){
+    return false;
+  }
 }

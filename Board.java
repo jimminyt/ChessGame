@@ -33,10 +33,19 @@ public class Board {
     gameBoard[7][7].setPiece(new Rook(7,7,1));
   }
 
-  public void makeMove(int x1, int y1, int x2, int y2){
-    gameBoard[x1][y1].getPiece().makeMove(x2,y2);
-    gameBoard[x2][y2].setPiece(gameBoard[x1][y1].getPiece());
-    gameBoard[x1][y1].setPiece(null);
+  public boolean makeMove(int x1, int y1, int x2, int y2){
+    if (gameBoard[x1][y1].getPiece() != null){
+      if (gameBoard[x1][y1].getPiece().validateMove(x2,y2,gameBoard)){
+        gameBoard[x2][y2].setPiece(gameBoard[x1][y1].getPiece());
+        gameBoard[x1][y1].setPiece(null);
+        return true;
+      }
+    }
+    return false;
+  }
+
+  public Square[][] getBoard(){
+    return gameBoard;
   }
 
 

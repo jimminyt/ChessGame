@@ -5,4 +5,7 @@ public class Queen extends Piece {
     name = "Q";
   }
 
+  public boolean validateMove(int xVal, int yVal, Square[][] board){
+    return false;
+  }
 }

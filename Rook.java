@@ -5,4 +5,7 @@ public class Rook extends Piece {
     name = "R";
   }
 
+  public boolean validateMove(int xVal, int yVal, Square[][] board){
+    return false;
+  }
 }

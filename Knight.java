@@ -5,4 +5,7 @@ public class Knight extends Piece {
     name = "K";
   }
 
+  public boolean validateMove(int xVal, int yVal, Square[][] board){
+    return false;
+  }
 }

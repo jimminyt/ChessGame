@@ -23,9 +23,13 @@ abstract class Piece{
     return colour;
   }
 
-  public void makeMove(int xVal, int yVal){
+  abstract boolean validateMove(int xVal, int yVal, Square[][] board);
+
+  // Changes x/y co-ords and returns true, called by a validated move
+  protected boolean makeMove(int xVal, int yVal){
     x = xVal;
     y = yVal;
+    return true;
   }
 
   protected boolean checkBorder(int xVal, int yVal){
